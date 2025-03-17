@@ -30,11 +30,26 @@ The app is implemented through a Flask/Python backend and ReactJS/Electron front
 
 
 ### Prerequisites for Modifying Code
-* Python must be installed on your machine to run backend. Required Python packages must be installed too, which can be installed executing in Command Prompt:
+* You can follow these steps in your **Command Prompt** or **PowerShell** on Windows to create, activate, and deactivate a Python virtual environment.
+
+- 1. To create a virtual environment named `myenv`, run the following command:
+    ```bash
+    python -m venv myenv
+    ```
+- 2. To activate the virtual environment, use the following command:
+    ```bash
+    .\myenv\Scripts\activate
+    ```
+- 3. When you're done working within the virtual environment, deactivate it by running:
+    ```bash
+    deactivate
+    ```
+
+* Required Python packages must be installed too, which can be installed to the Python vitrual environment by executing in Command Prompt:
     ```bash
     pip install -r requirements.txt
     ```
-* [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) must be installed on your machine to run frontend for development. Required node dependencing can be install by navigating to the frontend directory in Command Prompt and executing:
+* [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) must be installed on your machine to run frontend for development. Required node dependencing can be installed by navigating to the frontend directory in a new Command Prompt (don't install within the Python virtual environment) and executing:
     ```bash
     npm install
     ```
