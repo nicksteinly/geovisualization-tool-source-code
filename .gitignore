@@ -3,5 +3,4 @@ backend/.venv
 backend/myenv
 backend/__pycache__
 node_modules
-backend/data/*
 backend/build
