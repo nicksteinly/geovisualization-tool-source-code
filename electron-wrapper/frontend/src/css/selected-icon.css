@@ -1,0 +1,72 @@
+  .selected-icon {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding-top: 15px;
+    border: 2px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  .selected-icon .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .selected-icon .header p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .selected-icon .arrow {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #333;
+    transition: transform 0.3s ease;
+  }
+  
+  .selected-icon .arrow.expanded {
+    transform: rotate(180deg);
+  }
+  
+  .selected-icon .details {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #555;
+    max-height: 500px;
+  }
+
+  .selected-icon .details.collapsed {
+    max-height: 0;
+    padding: 0 10px;
+    visibility: hidden;
+  }
+
+  .selected-icon .details p {
+    margin: 5px 0;
+    line-height: 1.5;
+  }
+  
+  .selected-icon .details p strong {
+    color: #333;
+  }
+  

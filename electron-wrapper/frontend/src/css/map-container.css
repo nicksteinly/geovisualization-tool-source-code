@@ -1,0 +1,217 @@
+.map-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.input-container{
+  /* display: flex; */
+  /* flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  gap: 15px;
+  width: 100%;
+}
+
+.file-input-container {
+  display: flex;
+  justify-content: center;
+  width: 25%
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;  
+  width: 100%;
+}
+
+.toggle-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #666;
+  cursor: pointer;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+  flex-grow: 1; 
+}
+
+.toggle-button:not(.active):hover {
+  background-color: #ddd;
+  border-color: #bbb;
+}
+
+.toggle-button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.toggle-button:not(.active) {
+  background-color: #fff;
+  color: #333;
+}
+
+/* File Upload Container Styles */
+.file-upload-container {
+  border: 1px solid #e0e0e0; /* Light border for separation */
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  max-width: 100%;
+  margin: 20px auto; /* Center alignment */
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+}
+
+/* Toggle Container */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.toggle-label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 12px;
+  color: #555;
+}
+
+.data-toggle {
+  font-size: 14px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.data-toggle:focus {
+  border-color: #007bff; /* Blue border on focus */
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3); /* Glow effect */
+}
+
+/* File Input and Browse Button */
+.browse-button {
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 16px;
+  color: #fff;
+  background-color: #007bff; /* Blue button */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.browse-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom */
+}
+
+.browse-button:active {
+  transform: scale(1); /* Reset zoom */
+}
+
+.file-name {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Upload Buttons */
+.upload-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.upload-button, .cancel-button {
+  font-size: 14px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.upload-button {
+  background-color: #28a745; /* Green button */
+  color: #fff;
+}
+
+.upload-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.upload-button:disabled {
+  background-color: #6c757d; /* Gray for disabled */
+  cursor: not-allowed;
+}
+
+.cancel-button {
+  background-color: #dc3545; /* Red button */
+  color: #fff;
+}
+
+.cancel-button:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 100%) {
+  .file-upload-container {
+    padding: 16px;
+  }
+
+  .toggle-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .data-toggle {
+    width: 100%; /* Full-width for small screens */
+  }
+
+  .upload-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.horizontal-stack{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; 
+  gap: 16px;   
+}
+

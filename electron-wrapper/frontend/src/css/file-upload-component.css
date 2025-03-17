@@ -1,0 +1,87 @@
+.file-upload-container {
+    width: 400px;
+    margin: auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    background: #fff;
+  }
+  
+  .upload-box {
+    padding: 40px;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .upload-box:hover {
+    border-color: #aaa;
+  }
+  
+  .choose-file {
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .supported-formats {
+    color: #888;
+    font-size: 12px;
+  }
+  
+  .file-preview {
+    text-align: left;
+  }
+  
+  .file-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .file-icon {
+    width: 40px;
+    margin-right: 10px;
+  }
+  
+  .file-name {
+    font-weight: bold;
+  }
+  
+  .file-size {
+    color: #666;
+    font-size: 12px;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    background: #eee;
+    height: 6px;
+    border-radius: 4px;
+    margin: 10px 0;
+  }
+  
+  .progress {
+    height: 100%;
+    background: #007bff;
+    border-radius: 4px;
+  }
+  
+  .progress-text {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .progress-text.success {
+    color: #28a745;
+  }
+  
+  .remove-file {
+    margin-top: 10px;
+    background: none;
+    border: none;
+    color: #d9534f;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  

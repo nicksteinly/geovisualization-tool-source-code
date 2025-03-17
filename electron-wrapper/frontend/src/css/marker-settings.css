@@ -1,0 +1,27 @@
+/* General container spacing */
+.marker-settings-container-container {
+  display: flex;
+  flex-direction: column;
+}
+.marker-settings-container {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    max-width: 150px;
+  }
+  
+  /* Right-align only the color pickers */
+  .marker-picker {
+    border: none;
+    background: none;
+    margin-right: 10px;
+    width: 35px;
+    height: 25px;
+    padding: 0;
+  }
+  
+  /* Range slider to make it flexible */
+  .marker-size-range {
+    flex-grow: 1;
+  }
+  

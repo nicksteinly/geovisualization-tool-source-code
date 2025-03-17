@@ -1,0 +1,95 @@
+.technicians-overlay {
+  position: absolute;
+  top: 371px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1000;
+  max-height: 219px;
+  overflow-y: auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #ddd transparent; /* For Firefox */
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+  .technicians-overlay::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .technicians-overlay::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 10px;
+  }
+  
+  .technicians-overlay::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .technicians-overlay h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+  }
+  
+  .technicians-overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .technicians-overlay li {
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .technicians-overlay li:hover {
+    border-color: #bbb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .technicians-overlay li p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .technicians-overlay li p strong {
+    color: #333;
+  }
+  
+  .close-overlay {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    color: #666;
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+  }
+
+  .close-overlay:hover {
+    color: #000;
+  }
+  
+  

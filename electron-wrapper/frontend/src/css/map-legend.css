@@ -1,0 +1,28 @@
+.map-legend {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+  }
+  
+  .map-legend-title {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+  }
+  
+  .map-legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .map-legend-color {
+    width: 20px;
+    height: 10px;
+    margin-right: 10px;
+  }
+  
+  .map-legend-label {
+    font-size: 12px;
+  }
+  

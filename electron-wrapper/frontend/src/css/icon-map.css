@@ -1,0 +1,29 @@
+:root {
+  --map-width: "100%"
+}
+
+#icon-map-container {
+    position: relative;
+    height: 680px;
+    width: var(--map-width);
+  }
+  
+  #icon-map {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: var(--map-width);
+  }
+  
+  #marker-settings {
+    position: absolute; /* Stack it on top of the map */
+    top: 10px; /* Adjust positioning */
+    left: 10px;
+    z-index: 1000; /* Ensure it renders above other layers */
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  

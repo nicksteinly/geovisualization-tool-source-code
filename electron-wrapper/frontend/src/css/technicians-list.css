@@ -1,0 +1,115 @@
+.technicians-ul-container {
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  scrollbar-color: #ddd transparent; 
+}
+
+.technicians-ul-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #999;
+}
+
+.technicians-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 90%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scrollbar-width: thin;
+}
+
+.technicians-ul li {
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.technicians-ul li:hover {
+  border-color: #bbb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.technicians-ul li div p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.technician-view {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  max-width: 250px;
+  margin-bottom: 10px;
+}
+
+.technician-header {
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.technician-details {
+  padding: 10px;
+  background-color: #e3e3e3;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.technician-details p {
+  font-size: 0.9em;
+  color: #555;
+  margin: 4px 0;
+}
+
+.technician-details button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.technician-details button:hover {
+  background-color: #0056b3;
+}
+
+.search-bar-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  width: 80%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-bar:focus {
+  border-color: #007bff;
+}

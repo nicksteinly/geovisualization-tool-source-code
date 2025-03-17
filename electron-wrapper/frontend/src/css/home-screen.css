@@ -1,0 +1,327 @@
+:root {
+    --sidenav-column-width: 2%; /* Default expanded width */
+    --sidenav-collapsed-width: 2%; /* Collapsed width */
+    --map-width: 100%;
+    --map-canvas-width-factor: 100%;
+  }
+  
+  #grid-container {
+    display: grid;
+    grid-template-columns: 1fr var(--sidenav-column-width); /* Content on the left, sidenav on the right */
+    grid-template-areas: "content sidebar";
+    gap: 5%;
+    height: 100vh;
+    transition: grid-template-columns 0.3s ease-in-out;
+    padding: 1%;
+  }
+  
+  .contentPane {
+    grid-area: content;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+  }
+  
+  .sidenav {
+    grid-area: sidebar;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px #0000001a;
+    width: 100%;
+    transition: width 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidenav.collapsed {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px #0000001a;
+    width: var(--sidenav-collapsed-width);
+  }
+
+  .sidenav-content {
+    visibility: inherit;
+  }
+
+
+  .sidenav-content.hidden{
+    visibility: hidden;
+  }
+
+  
+  .menuBtn {
+    border: none;
+    width: 40px; 
+    height: 40px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    cursor: pointer; 
+    transition: transform 0.2s, background-color 0.3s ease; 
+    background-color: transparent;
+  }
+  
+  .menuBtn:hover {
+    transform: scale(1.1); 
+  }
+  
+  .menuBtn:active {
+    transform: scale(0.95); 
+  }
+  
+  .menuBtn:focus {
+    outline: none; 
+  }
+  
+  /* map-container */
+  .map-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--map-width);
+    height: 90%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .map {
+    position: relative;
+    width: var(--map-width);
+    height: 680px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: transparent;
+  }
+  
+  .input-container{
+    /* display: flex; */
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .file-input-container {
+    display: flex;
+    justify-content: center;
+    width: 25%
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;  
+    width: 100%;
+  }
+  
+  .toggle-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #666;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    flex-grow: 1; 
+  }
+  
+  .toggle-button:not(.active):hover {
+    background-color: #ddd;
+    border-color: #bbb;
+  }
+  
+  .toggle-button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  
+  .toggle-button:not(.active) {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* File Upload Container Styles */
+  .file-upload-container {
+    border: 1px solid #e0e0e0; /* Light border for separation */
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    max-width: 100%;
+    margin: 20px auto; /* Center alignment */
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+  }
+  
+  /* Toggle Container */
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .toggle-label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 12px;
+    color: #555;
+  }
+  
+  .data-toggle {
+    font-size: 14px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .data-toggle:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.3); /* Glow effect */
+  }
+  
+  /* File Input and Browse Button */
+  .browse-button {
+    display: inline-block;
+    font-size: 14px;
+    padding: 8px 16px;
+    color: #fff;
+    background-color: #007bff; /* Blue button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .browse-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom */
+  }
+  
+  .browse-button:active {
+    transform: scale(1); /* Reset zoom */
+  }
+  
+  .file-name {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    text-align: center;
+    font-style: italic;
+  }
+  
+  /* Upload Buttons */
+  .upload-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  
+  .upload-button, .cancel-button {
+    font-size: 14px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .upload-button {
+    background-color: #28a745; /* Green button */
+    color: #fff;
+  }
+  
+  .upload-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+  }
+  
+  .upload-button:disabled {
+    background-color: #6c757d; /* Gray for disabled */
+    cursor: not-allowed;
+  }
+  
+  .cancel-button {
+    background-color: #dc3545; /* Red button */
+    color: #fff;
+  }
+  
+  .cancel-button:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 100%) {
+    .file-upload-container {
+      padding: 16px;
+    }
+  
+    .toggle-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .data-toggle {
+      width: 100%; /* Full-width for small screens */
+    }
+  
+    .upload-buttons {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+  
+  .horizontal-stack{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    gap: 16px;   
+  }  
+
+
+  /* icon-map */
+  #icon-map-container {
+    position: relative;
+    height: 680px;
+    width: var(--map-width);
+  }
+  
+  #icon-map {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: var(--map-width);
+  }
+  
+  #marker-settings {
+    position: absolute; /* Stack it on top of the map */
+    top: 10px; /* Adjust positioning */
+    left: 10px;
+    z-index: 1000; /* Ensure it renders above other layers */
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+/***/
+/* .mapboxgl-canvas{
+  width: var(--map-canvas-width-factor, auto) !important;
+} */
